@@ -443,7 +443,7 @@ export default function App() {
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#d4c5b9]">
           <img
-            src="/4.jpg"
+            src="/4.PNG"
             alt="Esmeralda Wellness Studio"
             className="w-full h-full object-cover opacity-80 mix-blend-multiply"
             onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80"; }}
@@ -510,7 +510,7 @@ export default function App() {
           >
             <div className="arch-shape overflow-hidden aspect-[3/4] mb-8 relative bg-[#e8e1d9]">
               <img
-                src="/3.jpg"
+                src="/3.PNG"
                 alt="Sede Parque Leloir"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"; }}
@@ -542,7 +542,7 @@ export default function App() {
           >
             <div className="arch-shape overflow-hidden aspect-[3/4] mb-8 relative bg-[#e8e1d9]">
               <img
-                src="/2.jpg"
+                src="/2.PNG"
                 alt="Sede Puerto Madero"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80"; }}
@@ -688,10 +688,10 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8">
             {[
-              { title: 'Pilates Reformer', desc: 'Fortalece tu centro, mejora tu postura y flexibilidad con la técnica original en nuestros reformers de madera.', img: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&q=80' },
+              { title: 'Pilates Reformer', desc: 'Fortalece tu centro, mejora tu postura y flexibilidad con la técnica original en nuestros reformers de madera.', img: '/pilates.PNG' },
               { title: 'Barre', desc: 'Una fusión dinámica de ballet, pilates y yoga que tonifica y esculpe cada músculo de tu cuerpo.', img: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80' },
-              { title: 'Yoga', desc: 'Conecta respiración y movimiento para encontrar equilibrio mental y físico en un ambiente de paz.', img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80' },
-              { title: 'Masajes', desc: 'Rituales de bienestar exclusivos diseñados para liberar tensiones y restaurar tu energía vital.', img: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80' },
+              { title: 'Yoga', desc: 'Conecta respiración y movimiento para encontrar equilibrio mental y físico en un ambiente de paz.', img: '/yoga.PNG' },
+              { title: 'Masajes', desc: 'Rituales de bienestar exclusivos diseñados para liberar tensiones y restaurar tu energía vital.', img: '/masajes.PNG' },
             ].map((cls, idx) => (
               <motion.div
                 key={idx}
