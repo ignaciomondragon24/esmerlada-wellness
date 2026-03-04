@@ -47,17 +47,14 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // ── Arrancar ─────────────────────────────────────────────────────────────────
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Servidor corriendo en http://0.0.0.0:${PORT}`);
+});
+
 initDB()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
-      if (process.env.NODE_ENV !== 'production') {
-        console.log('   API:      http://localhost:' + PORT + '/api');
-        console.log('   Frontend: http://localhost:3000 (Vite dev server)');
-      }
-    });
+    console.log('✓ Base de datos conectada');
   })
   .catch((err) => {
-    console.error('Error al inicializar la BD:', err);
-    process.exit(1);
+    console.error('⚠ Error al inicializar la BD (el servidor seguirá activo):', err.message);
   });

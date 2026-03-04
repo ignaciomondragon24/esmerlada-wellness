@@ -4,6 +4,7 @@ buildCommand = "npm install && npm run build"
 
 [variables]
 NIXPACKS_NODE_VERSION = "20"
+NODE_ENV = "production"
 
 [deploy]
 startCommand        = "npm start"
