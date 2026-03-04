@@ -393,7 +393,11 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Esmeralda Wellness" className="w-10 h-10" />
+            <img
+              src="/logo.png"
+              alt="Esmeralda Wellness"
+              className={`w-16 h-16 transition-all duration-500 ${isScrolled ? '[filter:invert(17%)_sepia(52%)_saturate(659%)_hue-rotate(104deg)_brightness(94%)_contrast(98%)]' : ''}`}
+            />
             <span className="font-serif text-2xl tracking-widest uppercase">Esmeralda</span>
           </div>
 
