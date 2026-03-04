@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Diamond outer shape -->
+  <polygon points="100,8 192,100 100,192 8,100" stroke="#0F3A27" stroke-width="1.8" fill="none"/>
+  <!-- Inner diamond -->
+  <polygon points="100,38 162,100 100,162 38,100" stroke="#0F3A27" stroke-width="1.2" fill="none"/>
+  <!-- Facet lines top-left -->
+  <line x1="100" y1="8"   x2="38"  y2="100" stroke="#0F3A27" stroke-width="1"/>
+  <line x1="100" y1="8"   x2="162" y2="100" stroke="#0F3A27" stroke-width="1"/>
+  <!-- Facet lines bottom -->
+  <line x1="38"  y1="100" x2="100" y2="192" stroke="#0F3A27" stroke-width="1"/>
+  <line x1="162" y1="100" x2="100" y2="192" stroke="#0F3A27" stroke-width="1"/>
+  <!-- Cross facets -->
+  <line x1="100" y1="38"  x2="38"  y2="100" stroke="#0F3A27" stroke-width="0.8" opacity="0.5"/>
+  <line x1="100" y1="38"  x2="162" y2="100" stroke="#0F3A27" stroke-width="0.8" opacity="0.5"/>
+  <line x1="38"  y1="100" x2="100" y2="162" stroke="#0F3A27" stroke-width="0.8" opacity="0.5"/>
+  <line x1="162" y1="100" x2="100" y2="162" stroke="#0F3A27" stroke-width="0.8" opacity="0.5"/>
+  <!-- E letter -->
+  <text x="100" y="113" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="52" font-weight="400" fill="#0F3A27" opacity="0.75">E</text>
+</svg>

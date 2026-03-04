@@ -27,9 +27,9 @@ const SCHEDULE: ScheduleData = {
 };
 
 const LEVEL_CONFIG: Record<Level, { bg: string; text: string; border: string; label: string; dot: string }> = {
-  IA: { bg: 'bg-violet-100',  text: 'text-violet-800', border: 'border-violet-300', label: 'Intermedio Avanzado', dot: 'bg-violet-500' },
-  IS: { bg: 'bg-red-100',     text: 'text-red-800',    border: 'border-red-300',    label: 'Intermedio Stott',  dot: 'bg-red-500' },
-  IN: { bg: 'bg-green-100',   text: 'text-green-700',  border: 'border-green-300',  label: 'Inicial',           dot: 'bg-green-400' },
+  IA: { bg: 'bg-violet-100',      text: 'text-violet-800',       border: 'border-violet-300', label: 'Intermedio Avanzado', dot: 'bg-violet-500' },
+  IS: { bg: 'bg-[#A81E2B]/10',    text: 'text-[#A81E2B]',        border: 'border-[#A81E2B]/30', label: 'Intermedio Stott',  dot: 'bg-[#A81E2B]' },
+  IN: { bg: 'bg-emerald-50',      text: 'text-emerald-700',      border: 'border-emerald-200', label: 'Inicial',            dot: 'bg-emerald-400' },
 };
 
 // ─── Tratamientos faciales ────────────────────────────────────────────────────
@@ -392,10 +392,8 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full border border-[var(--color-emerald)] flex items-center justify-center">
-              <span className="font-serif text-lg leading-none">E</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Esmeralda Wellness" className="w-10 h-10" />
             <span className="font-serif text-2xl tracking-widest uppercase">Esmeralda</span>
           </div>
 
@@ -584,18 +582,14 @@ export default function App() {
           </div>
 
           {/* Leyenda */}
-          <div className="flex justify-center gap-6 mb-10">
-            <div className="flex items-center gap-2 text-sm">
-              <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-              <span className="font-medium">Verde</span>
-              <span className="opacity-60">— Inicial / Intermedio</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm">
-              <span className="w-3 h-3 rounded-full bg-[var(--color-emerald)] inline-block"></span>
-              <span className="font-medium">Negro</span>
-              <span className="opacity-60">— Intermedio / Avanzado</span>
-            </div>
-          </div>
+              <div className="flex flex-wrap justify-center gap-6 mb-10">
+                {(Object.keys(LEVEL_CONFIG) as Level[]).map(l => (
+                  <div key={l} className="flex items-center gap-2 text-sm">
+                    <span className={`inline-block w-3 h-3 rounded-full ${LEVEL_CONFIG[l].dot}`}></span>
+                    <span className="font-medium opacity-80">{LEVEL_CONFIG[l].label}</span>
+                  </div>
+                ))}
+              </div>
 
           {/* Tabla desktop */}
           <div className="hidden md:block overflow-x-auto rounded-2xl border border-[var(--color-emerald)]/12 bg-[var(--color-cream)]">
@@ -868,10 +862,8 @@ export default function App() {
       {/* ── Footer ─────────────────────────────────────────────────────────── */}
       <footer className="py-12 px-6 md:px-12 border-t border-[var(--color-emerald)]/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full border border-[var(--color-emerald)] flex items-center justify-center">
-              <span className="font-serif text-lg leading-none">E</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Esmeralda Wellness" className="w-8 h-8" />
             <span className="font-serif text-xl tracking-widest uppercase">Esmeralda</span>
           </div>
           <div className="flex gap-6 text-sm tracking-widest uppercase">
