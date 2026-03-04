@@ -9,26 +9,27 @@ import { motion, AnimatePresence } from 'motion/react';
 const DAYS = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 const HOURS = ['08:00', '09:00', '10:00', '11:00', '12:00', '16:00', '17:00', '18:00', '19:00', '20:00'];
 
-type Level = 'V' | 'N';
+type Level = 'IA' | 'IS' | 'IN';
 interface Slot { teacher: string; level: Level }
 type ScheduleData = Record<string, Record<string, Slot | null>>;
 
 const SCHEDULE: ScheduleData = {
-  '08:00': { Lunes: { teacher: 'Belu', level: 'V' }, Martes: { teacher: 'Dani', level: 'N' }, 'Miércoles': { teacher: 'Romi', level: 'V' }, Jueves: { teacher: 'Belu', level: 'V' }, Viernes: { teacher: 'Dani', level: 'N' }, Sábado: { teacher: 'Romi', level: 'V' } },
-  '09:00': { Lunes: { teacher: 'Belu', level: 'V' }, Martes: { teacher: 'Dani', level: 'N' }, 'Miércoles': { teacher: 'Romi', level: 'V' }, Jueves: { teacher: 'Belu', level: 'V' }, Viernes: { teacher: 'Dani', level: 'N' }, Sábado: { teacher: 'Romi', level: 'V' } },
-  '10:00': { Lunes: { teacher: 'Belu', level: 'V' }, Martes: { teacher: 'Dani', level: 'N' }, 'Miércoles': { teacher: 'Romi', level: 'V' }, Jueves: { teacher: 'Belu', level: 'V' }, Viernes: { teacher: 'Dani', level: 'N' }, Sábado: { teacher: 'Romi', level: 'V' } },
-  '11:00': { Lunes: { teacher: 'Belu', level: 'V' }, Martes: { teacher: 'Dani', level: 'N' }, 'Miércoles': { teacher: 'Romi', level: 'V' }, Jueves: { teacher: 'Belu', level: 'V' }, Viernes: { teacher: 'Dani', level: 'N' }, Sábado: { teacher: 'Romi', level: 'V' } },
-  '12:00': { Lunes: { teacher: 'Belu', level: 'V' }, Martes: { teacher: 'Dani', level: 'N' }, 'Miércoles': { teacher: 'Romi', level: 'V' }, Jueves: { teacher: 'Belu', level: 'V' }, Viernes: { teacher: 'Dani', level: 'N' }, Sábado: { teacher: 'Romi', level: 'V' } },
-  '16:00': { Lunes: { teacher: 'Dani', level: 'N' }, Martes: { teacher: 'Romi', level: 'V' }, 'Miércoles': { teacher: 'Belu', level: 'V' }, Jueves: { teacher: 'Dani', level: 'N' }, Viernes: { teacher: 'Romi', level: 'V' }, Sábado: null },
-  '17:00': { Lunes: { teacher: 'Dani', level: 'N' }, Martes: { teacher: 'Romi', level: 'V' }, 'Miércoles': { teacher: 'Belu', level: 'V' }, Jueves: { teacher: 'Dani', level: 'N' }, Viernes: { teacher: 'Romi', level: 'V' }, Sábado: null },
-  '18:00': { Lunes: { teacher: 'Dani', level: 'N' }, Martes: { teacher: 'Romi', level: 'V' }, 'Miércoles': { teacher: 'Belu', level: 'V' }, Jueves: { teacher: 'Dani', level: 'N' }, Viernes: { teacher: 'Romi', level: 'V' }, Sábado: null },
-  '19:00': { Lunes: { teacher: 'Dani', level: 'N' }, Martes: { teacher: 'Romi', level: 'V' }, 'Miércoles': { teacher: 'Belu', level: 'V' }, Jueves: { teacher: 'Dani', level: 'N' }, Viernes: { teacher: 'Romi', level: 'V' }, Sábado: null },
-  '20:00': { Lunes: { teacher: 'Dani', level: 'N' }, Martes: { teacher: 'Romi', level: 'V' }, 'Miércoles': { teacher: 'Belu', level: 'V' }, Jueves: { teacher: 'Dani', level: 'N' }, Viernes: { teacher: 'Romi', level: 'V' }, Sábado: null },
+  '08:00': { Lunes: { teacher: 'Belu', level: 'IA' }, Martes: { teacher: 'Dani', level: 'IS' }, 'Miércoles': { teacher: 'Romi', level: 'IN' }, Jueves: { teacher: 'Belu', level: 'IA' }, Viernes: { teacher: 'Dani', level: 'IS' }, Sábado: { teacher: 'Romi', level: 'IN' } },
+  '09:00': { Lunes: { teacher: 'Belu', level: 'IA' }, Martes: { teacher: 'Dani', level: 'IS' }, 'Miércoles': { teacher: 'Romi', level: 'IN' }, Jueves: { teacher: 'Belu', level: 'IA' }, Viernes: { teacher: 'Dani', level: 'IS' }, Sábado: { teacher: 'Romi', level: 'IN' } },
+  '10:00': { Lunes: { teacher: 'Belu', level: 'IA' }, Martes: { teacher: 'Dani', level: 'IS' }, 'Miércoles': { teacher: 'Romi', level: 'IN' }, Jueves: { teacher: 'Belu', level: 'IA' }, Viernes: { teacher: 'Dani', level: 'IS' }, Sábado: { teacher: 'Romi', level: 'IN' } },
+  '11:00': { Lunes: { teacher: 'Belu', level: 'IA' }, Martes: { teacher: 'Dani', level: 'IS' }, 'Miércoles': { teacher: 'Romi', level: 'IN' }, Jueves: { teacher: 'Belu', level: 'IA' }, Viernes: { teacher: 'Dani', level: 'IS' }, Sábado: { teacher: 'Romi', level: 'IN' } },
+  '12:00': { Lunes: { teacher: 'Belu', level: 'IA' }, Martes: { teacher: 'Dani', level: 'IS' }, 'Miércoles': { teacher: 'Romi', level: 'IN' }, Jueves: { teacher: 'Belu', level: 'IA' }, Viernes: { teacher: 'Dani', level: 'IS' }, Sábado: { teacher: 'Romi', level: 'IN' } },
+  '16:00': { Lunes: { teacher: 'Dani', level: 'IS' }, Martes: { teacher: 'Romi', level: 'IN' }, 'Miércoles': { teacher: 'Belu', level: 'IA' }, Jueves: { teacher: 'Dani', level: 'IS' }, Viernes: { teacher: 'Romi', level: 'IN' }, Sábado: null },
+  '17:00': { Lunes: { teacher: 'Dani', level: 'IS' }, Martes: { teacher: 'Romi', level: 'IN' }, 'Miércoles': { teacher: 'Belu', level: 'IA' }, Jueves: { teacher: 'Dani', level: 'IS' }, Viernes: { teacher: 'Romi', level: 'IN' }, Sábado: null },
+  '18:00': { Lunes: { teacher: 'Dani', level: 'IS' }, Martes: { teacher: 'Romi', level: 'IN' }, 'Miércoles': { teacher: 'Belu', level: 'IA' }, Jueves: { teacher: 'Dani', level: 'IS' }, Viernes: { teacher: 'Romi', level: 'IN' }, Sábado: null },
+  '19:00': { Lunes: { teacher: 'Dani', level: 'IS' }, Martes: { teacher: 'Romi', level: 'IN' }, 'Miércoles': { teacher: 'Belu', level: 'IA' }, Jueves: { teacher: 'Dani', level: 'IS' }, Viernes: { teacher: 'Romi', level: 'IN' }, Sábado: null },
+  '20:00': { Lunes: { teacher: 'Dani', level: 'IS' }, Martes: { teacher: 'Romi', level: 'IN' }, 'Miércoles': { teacher: 'Belu', level: 'IA' }, Jueves: { teacher: 'Dani', level: 'IS' }, Viernes: { teacher: 'Romi', level: 'IN' }, Sábado: null },
 };
 
-const LEVEL_CONFIG: Record<Level, { bg: string; text: string; border: string; label: string }> = {
-  V: { bg: 'bg-emerald-50',  text: 'text-emerald-800', border: 'border-emerald-300', label: 'Inicial / Intermedio' },
-  N: { bg: 'bg-[var(--color-emerald)]', text: 'text-[var(--color-cream)]', border: 'border-[var(--color-emerald)]', label: 'Intermedio / Avanzado' },
+const LEVEL_CONFIG: Record<Level, { bg: string; text: string; border: string; label: string; dot: string }> = {
+  IA: { bg: 'bg-violet-100',  text: 'text-violet-800', border: 'border-violet-300', label: 'Intermedio Avanzado', dot: 'bg-violet-500' },
+  IS: { bg: 'bg-red-100',     text: 'text-red-800',    border: 'border-red-300',    label: 'Intermedio Stott',  dot: 'bg-red-500' },
+  IN: { bg: 'bg-green-100',   text: 'text-green-700',  border: 'border-green-300',  label: 'Inicial',           dot: 'bg-green-400' },
 };
 
 // ─── Tratamientos faciales ────────────────────────────────────────────────────
@@ -187,7 +188,7 @@ function BookingModal({ onClose }: { onClose: () => void }) {
               <div className="flex gap-4 mb-6">
                 {(Object.keys(LEVEL_CONFIG) as Level[]).map(l => (
                   <div key={l} className="flex items-center gap-2 text-xs">
-                    <span className={`inline-block w-3 h-3 rounded-full ${l === 'V' ? 'bg-emerald-500' : 'bg-[var(--color-emerald)]'}`}></span>
+                    <span className={`inline-block w-3 h-3 rounded-full ${LEVEL_CONFIG[l].dot}`}></span>
                     <span className="opacity-70">{LEVEL_CONFIG[l].label}</span>
                   </div>
                 ))}
@@ -627,7 +628,7 @@ export default function App() {
                         <td key={day} className="py-2 px-2 text-center">
                           {slot && cfg ? (
                             <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border ${cfg.bg} ${cfg.text} ${cfg.border}`}>
-                              <span className={`w-1.5 h-1.5 rounded-full ${slot.level === 'V' ? 'bg-emerald-500' : 'bg-[var(--color-cream)]'}`}></span>
+                              <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`}></span>
                               {slot.teacher}
                             </span>
                           ) : (
@@ -659,7 +660,7 @@ export default function App() {
                       <div key={hour} className="flex items-center justify-between">
                         <span className="font-mono text-xs opacity-50">{hour}</span>
                         <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border ${cfg.bg} ${cfg.text} ${cfg.border}`}>
-                          <span className={`w-1.5 h-1.5 rounded-full ${slot.level === 'V' ? 'bg-emerald-500' : 'bg-[var(--color-cream)]'}`}></span>
+                          <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`}></span>
                           {slot.teacher}
                         </span>
                       </div>
