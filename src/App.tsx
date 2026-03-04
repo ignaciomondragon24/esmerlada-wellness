@@ -393,7 +393,7 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Esmeralda Wellness" className="w-10 h-10" />
+            <img src="/logo.png" alt="Esmeralda Wellness" className="w-10 h-10" />
             <span className="font-serif text-2xl tracking-widest uppercase">Esmeralda</span>
           </div>
 
@@ -863,7 +863,7 @@ export default function App() {
       <footer className="py-12 px-6 md:px-12 border-t border-[var(--color-emerald)]/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Esmeralda Wellness" className="w-8 h-8" />
+            <img src="/logo.png" alt="Esmeralda Wellness" className="w-8 h-8" />
             <span className="font-serif text-xl tracking-widest uppercase">Esmeralda</span>
           </div>
           <div className="flex gap-6 text-sm tracking-widest uppercase">
