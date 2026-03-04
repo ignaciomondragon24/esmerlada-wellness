@@ -396,7 +396,7 @@ export default function App() {
             <img
               src="/logo.png"
               alt="Esmeralda Wellness"
-              className={`w-16 h-16 transition-all duration-500 ${isScrolled ? '[filter:invert(17%)_sepia(52%)_saturate(659%)_hue-rotate(104deg)_brightness(94%)_contrast(98%)]' : ''}`}
+              className={`w-16 h-16 transition-all duration-500 ${isScrolled ? '[filter:brightness(0)_saturate(100%)_invert(14%)_sepia(67%)_saturate(453%)_hue-rotate(107deg)_brightness(88%)]' : ''}`}
             />
             <span className="font-serif text-2xl tracking-widest uppercase">Esmeralda</span>
           </div>
